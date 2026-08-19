@@ -24,7 +24,7 @@ Las dependencias marcadas como `Dev` se utilizan únicamente durante el desarrol
 
 ---
 ## Documentación
-*Me dio sueño aquí, mañana continuaré 😅😅*
+La documentación la puedes encontrar en [docs/](./docs/README.md), ahi podras encontrar una tabla con toda la documentación disponible.
 
 ---
 
