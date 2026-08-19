@@ -22,5 +22,3 @@ docs/
 ├── architecture/   # Decisiones y componentes internos
 └── guides/         # Guías prácticas para desarrollar y utilizar el proyecto
 ```
-
-Si vas a añadir una funcionalidad nueva, intenta acompañarla con su documentación correspondiente. Aunque sea breve, ayuda bastante a mantener claro el propósito de cada parte del proyecto.
