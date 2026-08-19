@@ -1,4 +1,5 @@
 const db = require("../config/database");
+const { in_http_log } = require("../utils/log.util");
 
 const requestIdMiddleware = async (req, res, next) => {
     try {
@@ -22,6 +23,7 @@ const requestIdMiddleware = async (req, res, next) => {
 
         res.setHeader("X-Request-Id", genRequestId);
 
+        in_http_log(req, res);
         next();
     } catch (error) {
         next(error);

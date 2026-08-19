@@ -1,7 +1,9 @@
 const db = require("../config/database");
+const { out_http_log } = require("./log.util");
 
 const success_res = async (req, res, data = null, message = null, status = 200) => {
     const durationMs = Date.now() - req.startedAt;
+    out_http_log(req, res, durationMs, status);
 
     await db.query(
         `
@@ -34,6 +36,7 @@ const success_res = async (req, res, data = null, message = null, status = 200) 
 
 const error_res = async (req, res, message = "Ha ocurrido un error", status = 500, code = "INTERNAL_ERROR", err = null) => {
     const durationMs = Date.now() - req.startedAt;
+    out_http_log(req, res, durationMs, status, true);
 
     await db.query(
         `
